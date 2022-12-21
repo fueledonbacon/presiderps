@@ -69,7 +69,7 @@ const App = () => {
 
       {address &&
         <>
-          <Button disabled={!mintFunction.write} onClick={() => { mintFunction.write?.() }}>Mint Now</Button>
+          <Button disabled={!mintFunction.write} onClick={() => { mintFunction.write?.() }}>Mint (Testing)</Button>
           <div className="grid grid-cols-2 gap-2 text-center">
 
             {openAccountModal && (
@@ -85,7 +85,7 @@ const App = () => {
             )}
           </div>
         </>}
-      <ToastContainer />
+      <ToastContainer position="bottom-center" />
     </div>
   );
 };
