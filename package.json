@@ -25,7 +25,8 @@
   "scripts": {
     "dev": "npm run start",
     "start": "PORT=3030 react-scripts start",
-    "build": "react-scripts build",
+    "copy-lib": "node move.js",
+    "build": "react-scripts build && yarn copy-lib",
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!@rainbow-me)/\"",
     "eject": "react-scripts eject"
   },
