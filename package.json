@@ -1,6 +1,6 @@
 {
-  "name": "with-create-react-app",
-  "version": "0.1.32",
+  "name": "presiderps",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@enzoferey/ethers-error-parser": "^0.2.3",
