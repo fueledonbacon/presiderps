@@ -27,10 +27,6 @@ const App = () => {
     address: CONTRACT_ADDRESS as string,
     abi: abi,
     functionName: 'mint',
-    // args: [1],
-    // overrides: {
-    //   value: ethers.utils.parseEther('0.1')
-    // }
   })
   console.log("details", CONTRACT_ADDRESS, config, prepError)
   const mintFunction = useContractWrite(config);
@@ -48,7 +44,7 @@ const App = () => {
       toast.error("prep error " + parsed?.context);
     }
     if (mintFunction.isSuccess) {
-      toast.success('Minted successfully');
+      toast.success('Minting transaction intiated');
     }
     if (mintFunction.isError) {
       toast.error('Minting failed');
@@ -81,7 +77,11 @@ const App = () => {
                 Chain
               </a>
             )}
+
           </div>
+          <p>
+            {mintFunction.isSuccess && (<a href={"https://mumbai.polygonscan.com/tx/" + mintFunction.data?.hash} className="underline cursor-pointer" target="_blank" rel="noreferrer">View Transaction</a>)}
+          </p>
         </>}
       <ToastContainer position="top-center" />
     </div>
