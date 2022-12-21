@@ -83,7 +83,7 @@ const App = () => {
             )}
           </div>
         </>}
-      <ToastContainer position="bottom-center" />
+      <ToastContainer position="top-center" />
     </div>
   );
 };
