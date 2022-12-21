@@ -72,12 +72,6 @@ const App = () => {
           <Button disabled={!mintFunction.write} onClick={() => { mintFunction.write?.() }}>Mint Now</Button>
           <div className="grid grid-cols-2 gap-2 text-center">
 
-            {openConnectModal && (
-              <a  className="underline cursor-pointer" onClick={openConnectModal}>
-                Connect
-              </a>
-            )}
-
             {openAccountModal && (
               <a className="underline cursor-pointer" onClick={openAccountModal} >
                 Account
