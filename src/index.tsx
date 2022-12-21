@@ -8,7 +8,7 @@ import { configureChains, createClient, WagmiConfig } from 'wagmi';
 // import { polygon, polygonMumbai, goerli } from 'wagmi/chains';
 import { polygonMumbai } from 'wagmi/chains';
 import { infuraProvider } from 'wagmi/providers/infura';
-// import { publicProvider } from 'wagmi/providers/public';
+import { publicProvider } from 'wagmi/providers/public';
 import App from './App';
 
 import { PUBLIC_INFURA_ID } from "./config";
@@ -21,7 +21,7 @@ const { chains, provider, webSocketProvider } = configureChains(
   ],
   [
     infuraProvider({ apiKey: PUBLIC_INFURA_ID as string }),
-    // publicProvider(),
+    publicProvider(),
   ]
 );
 
