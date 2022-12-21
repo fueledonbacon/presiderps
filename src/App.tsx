@@ -9,7 +9,7 @@ import { useAccount, usePrepareContractWrite, useContractWrite } from 'wagmi';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ethers } from 'ethers';
-import abi from './abi.json';
+import abi from './Presiderps.json';
 
 import { CONTRACT_ADDRESS } from "./config"
 import { getParsedEthersError } from "@enzoferey/ethers-error-parser";
@@ -19,20 +19,18 @@ import { Button } from './Button';
 const App = () => {
   const [view, setView] = useState<"mint" | "connect">("connect");
 
-  const { openConnectModal } = useConnectModal();
   const { openAccountModal } = useAccountModal();
   const { openChainModal } = useChainModal();
-
 
   const { address } = useAccount();
   const { config, error: prepError } = usePrepareContractWrite({
     address: CONTRACT_ADDRESS as string,
     abi: abi,
     functionName: 'mint',
-    args: [1],
-    overrides: {
-      value: ethers.utils.parseEther('0.1')
-    }
+    // args: [1],
+    // overrides: {
+    //   value: ethers.utils.parseEther('0.1')
+    // }
   })
   console.log("details", CONTRACT_ADDRESS, config, prepError)
   const mintFunction = useContractWrite(config);
