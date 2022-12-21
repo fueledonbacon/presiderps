@@ -2,30 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-
 import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
-import { polygon, goerli } from 'wagmi/chains';
+// import { polygon, polygonMumbai, goerli } from 'wagmi/chains';
+import { polygonMumbai } from 'wagmi/chains';
 import { infuraProvider } from 'wagmi/providers/infura';
-import { publicProvider } from 'wagmi/providers/public';
+// import { publicProvider } from 'wagmi/providers/public';
 import App from './App';
 
-const { PUBLIC_INFURA_ID } = process.env;
+import { PUBLIC_INFURA_ID } from "./config";
 
 const { chains, provider, webSocketProvider } = configureChains(
   [
-    polygon,
-    ...(process.env.REACT_APP_ENABLE_TESTNETS === 'true' ? [goerli] : []),
+    // polygon,
+    polygonMumbai,
+    // ...(process.env.REACT_APP_ENABLE_TESTNETS === 'true' ? [goerli] : []),
   ],
   [
     infuraProvider({ apiKey: PUBLIC_INFURA_ID as string }),
-    publicProvider(),
+    // publicProvider(),
   ]
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'RainbowKit demo',
+  appName: 'Presiderps',
   chains,
 });
 
