@@ -67,7 +67,7 @@ const App = () => {
 
       {address &&
         <>
-          <Button disabled={!mintFunction.write} onClick={() => { mintFunction.write?.() }}>Mint (Testing)</Button>
+          <Button disabled={!mintFunction.write} onClick={() => { mintFunction.write?.() }}>Mint (Free)</Button>
           <div className="grid grid-cols-2 gap-2 text-center">
 
             {openAccountModal && (
