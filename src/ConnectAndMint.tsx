@@ -25,7 +25,6 @@ export default function ConnectAndMint() {
     abi: abi,
     functionName: 'mint',
   })
-  console.log("details", CONTRACT_ADDRESS, config, prepError)
   const mintFunction = useContractWrite(config);
   const setViewCb = useCallback((view: "mint" | "connect") => { setView(view) }, [setView])
   useEffect(() => {

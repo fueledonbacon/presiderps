@@ -3,6 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import ConnectAndMint from './ConnectAndMint';
 
 const App = () => {
+  console.log("Version 1.0.3")
 
 
   return (
