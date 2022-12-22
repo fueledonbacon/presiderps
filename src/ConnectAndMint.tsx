@@ -48,7 +48,7 @@ export default function ConnectAndMint() {
   }, [mintFunction.isSuccess, mintFunction.isError, prepError]);
 
   return (
-    <div className="grid justify-items-center p-8">
+    <div className="grid justify-items-center">
       {view === "connect" && <DerpConnect />}
 
       {address &&

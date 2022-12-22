@@ -7,13 +7,7 @@ const App = () => {
   console.log(`App version: ${pkg.version}`);
 
   return (
-    <div
-      style={{
-        display: 'grid',
-        justifyItems: 'center',
-        padding: 12,
-      }}
-    >
+    <div className="grid justify-center p-4">
       
       <div className="hidden sm:block">
         <ConnectAndMint />
