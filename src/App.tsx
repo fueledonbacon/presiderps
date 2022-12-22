@@ -1,10 +1,10 @@
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ConnectAndMint from './ConnectAndMint';
+import pkg from "../package.json";
 
 const App = () => {
-  console.log("Version 1.0.3")
-
+  console.log(`App version: ${pkg.version}`);
 
   return (
     <div

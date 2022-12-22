@@ -1,6 +1,6 @@
 {
   "name": "presiderps",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "dependencies": {
     "@enzoferey/ethers-error-parser": "^0.2.3",

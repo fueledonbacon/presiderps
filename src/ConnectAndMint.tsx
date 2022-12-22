@@ -49,7 +49,7 @@ export default function ConnectAndMint() {
 
   return (
     <div className="grid justify-items-center p-8">
-      {view == "connect" && <DerpConnect />}
+      {view === "connect" && <DerpConnect />}
 
       {address &&
         <>
@@ -57,15 +57,15 @@ export default function ConnectAndMint() {
           <div className="grid grid-cols-2 gap-2 text-center">
 
             {openAccountModal && (
-              <a className="underline cursor-pointer" onClick={openAccountModal} >
+              <span className="underline cursor-pointer" onClick={openAccountModal} >
                 Account
-              </a>
+              </span>
             )}
 
             {openChainModal && (
-              <a className="underline cursor-pointer" onClick={openChainModal}>
+              <span className="underline cursor-pointer" onClick={openChainModal}>
                 Chain
-              </a>
+              </span>
             )}
 
           </div>
